@@ -1,0 +1,70 @@
+### Creează mașina
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brand": "BMW",
+  "model": "X5",
+  "year": 2025
+}
+###
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+"brand": "BMW",
+"model": "M3",
+"year": 2024
+}
+###
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brand": "Audi",
+  "model": "Q5",
+  "year": 1890
+}
+### Ia toate mașinile
+GET http://localhost:8080/cars
+
+### Ia mașina cu ID 1
+GET http://localhost:8080/cars/1
+
+### ID inexistent
+GET http://localhost:8080/cars/999
+
+###
+DELETE http://localhost:8080/cars/2
+
+###
+PUT http://localhost:8080/cars/2
+Content-Type: application/json
+
+{
+  "brand": "Audi",
+  "model": "Q5",
+  "year": 2026
+}
+
+###
+GET http://localhost:8080/cars/2
+###
+GET http://localhost:8080/cars/brand/BMW
+###
+POST http://localhost:8080/owners
+Content-Type: application/json
+
+{
+  "name": "Andrei"
+}
+###
+POST http://localhost:8080/cars
+Content-Type: application/json
+
+{
+  "brand": "BMW",
+  "model": "X5",
+  "year": 2025,
+  "ownerId": 1
+}
